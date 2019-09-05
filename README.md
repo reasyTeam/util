@@ -25,10 +25,10 @@ const {getType} = require('@reasy-team/util')
 - [isDefined](#isDefined(val))
 - [isUndef](#isUndef(val))
 - [ipToInt](#ipToInt(ip))
-- [isSameNet](#isSameNet(lanIp, wanIp, lanMask, wanMask))
+- [isSameNet](#isSameNet(lanIp,-wanIp,-lanMask,-wanMask))
 - [deepClone](#deepClone(obj))
-- [debounce](#debounce(func, seconds, [immediate=false]))
-- [throttle](#throttle(func, wait))
+- [debounce](#debounce(func,-seconds,-[immediate=false]))
+- [throttle](#throttle(func,-wait))
 - [encodeText](#encodeText(str))
 - [decodeText](#decodeText(str))
 - [guid](#guid())
@@ -36,20 +36,20 @@ const {getType} = require('@reasy-team/util')
 ### validate
 
 - [getUtf8Length](#getUtf8Length(str))
-- [byteLen](#byteLen(str, [min], [max]))
-- [len](#len(str, [min], [max]))
-- [num](#num(str, min, max))
-- [float](#float(str, min, max))
-- [even](#even(str, min, max))
+- [byteLen](#byteLen(str,-[min],-[max]))
+- [len](#len(str,-[min],-[max]))
+- [num](#num(str,-min,-max))
+- [float](#float(str,-min,-max))
+- [even](#even(str,-min,-max))
 - [url](#url(str))
 - [phoneNumber](#phoneNumber(str))
-- [domain](#domain(str, min, max))
+- [domain](#domain(str,-min,-max))
 - [mac](#mac(str))
 - [specialMac](#specialMac(str))
 - [ip](#ip(str))
 - [ipNet](#ipNet(str))
 - [privateIP](#privateIP(str))
-- [netSegmentCheck](#netSegmentCheck(ip, lanIp, mask))
+- [netSegmentCheck](#netSegmentCheck(ip,-lanIp,-mask))
 - [mask](#mask(str))
 - [allMask](#allMask(str))
 - [email](#email(str))
@@ -155,7 +155,7 @@ isUndef(null) // true
 
 
 
-### ipToInt(ip)  这个有问题
+### ipToInt(ip)
 
 将Ip地址转成整数
 
@@ -167,8 +167,8 @@ isUndef(null) // true
 
 #### 示例
 ```js
-ipToInt('192.168.168.168') // String
-ipToInt([]) // Array
+ipToInt('192.168.168.168') // 3232278696
+ipToInt('192.168.0.1') // 3232235521
 ```
 
 
