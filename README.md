@@ -224,8 +224,8 @@ console.log(cloneObj) // {a: 'text'}
 创建一个`debounced`（防抖动）函数，该函数会从上一次被调用后，延迟 `wait` 毫秒后调用 `func` 方法。 `func`只会被调用一次。
 
 **参数**
-- func*(Function)*: 回调函数
-- seconds*(number)*: 延迟执行毫秒数
+- func(*Function*): 回调函数
+- seconds(*number*): 延迟执行毫秒数
 - \[immediate=false](boolean): 是否立即执行
 
 **返回**
@@ -243,8 +243,8 @@ debounce([]) // Array
 创建一个`throttle`（节流）函数，该函数从上一次调用后，延迟`wait`毫秒后调用`func`方法，期间多次调用直接忽略。
 
 **参数**
-- func*(Function)*: 回调函数
-- seconds*(number)*: 延迟执行毫秒数
+- func(*Function*): 回调函数
+- seconds(*number*): 延迟执行毫秒数
 
 **返回**
 ***(Function)***: 返回新的`throttle`（节流）函数。
