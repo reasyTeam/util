@@ -1,6 +1,6 @@
 {
   "name": "@reasy-team/util",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reasy Team 数据验证和工具库函数",
   "main": "dist/reasy-util.common.js",
   "module": "dist/reasy-util.esm.js",
