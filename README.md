@@ -36,6 +36,7 @@ const {getType} = require('@reasy-team/util')
 ### validate
 
 - [getUtf8Length](#getUtf8Length(str))
+- [required](#required(str))
 - [byteLen](#byteLen(str,-[min],-[max]))
 - [len](#len(str,-[min],-[max]))
 - [num](#num(str,-min,-max))
@@ -322,6 +323,21 @@ getUtf8Length('test') // 4
 getUtf8Length('中文测试') // 12
 ```
 
+### required(str)
+
+`str`为必填项
+
+**参数**
+- str(*string*): 需要处理的字符串
+
+**返回**
+***(string)***: 为空返回对应的错误信息，否则返回`undefined`
+
+**示例**
+```js
+required('') // This field is required
+required('不为空') // undefined
+```
 
 
 ### len(str, [min], [max])
