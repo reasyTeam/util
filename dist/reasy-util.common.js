@@ -1,6 +1,6 @@
 /*!
- * reasy-util v1.0.0 
- * (c) 2019 undefined
+ * reasy-util v1.0.1 
+ * (c) 2020 undefined
  */
 'use strict';
 
@@ -292,6 +292,12 @@ function getUtf8Length (str) {
     }
   }
   return totalLength
+}
+
+function required (str) {
+  if (!str && str !== 0) {
+    return _('This field is required')
+  }
 }
 
 function len (str, min, max) {
@@ -612,6 +618,7 @@ exports.noSpaceStartEnd = noSpaceStartEnd;
 exports.num = num;
 exports.phoneNumber = phoneNumber;
 exports.privateIP = privateIP;
+exports.required = required;
 exports.specialMac = specialMac;
 exports.throttle = throttle;
 exports.url = url;

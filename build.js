@@ -4,41 +4,42 @@ const path = require('path')
 const fs = require('fs')
 const resolve = _path => path.resolve(__dirname, _path)
 const pack = require('./package.json')
+const packname = 'reasy-util'
 
 const banner = '/*!\n' +
-  ` * ${pack.name} v${pack.version} \n` +
+  ` * ${packname} v${pack.version} \n` +
   ` * (c) ${new Date().getFullYear()} ${pack.author.name}\n` +
   ' */'
 
 const entrys = {
   commonjs: {
     entry: resolve('./index.js'),
-    dest: resolve(`dist/${pack.name}.common.js`),
+    dest: resolve(`dist/${packname}.common.js`),
     format: 'cjs'
   },
   cjsUtil: {
     entry: resolve('./lib/util.js'),
-    dest: resolve(`dist/${pack.name}.util.common.js`),
+    dest: resolve(`dist/${packname}.util.common.js`),
     format: 'cjs'
   },
   cjsValidate: {
     entry: resolve('./lib/validate.js'),
-    dest: resolve(`dist/${pack.name}.validate.common.js`),
+    dest: resolve(`dist/${packname}.validate.common.js`),
     format: 'cjs'
   },
   esm: {
     entry: './index.js',
-    dest: resolve(`dist/${pack.name}.esm.js`),
+    dest: resolve(`dist/${packname}.esm.js`),
     format: 'es'
   },
   esmUtil: {
     entry: resolve('./lib/util.js'),
-    dest: resolve(`dist/${pack.name}.util.esm.js`),
+    dest: resolve(`dist/${packname}.util.esm.js`),
     format: 'es'
   },
   esmValidate: {
     entry: resolve('./lib/validate.js'),
-    dest: resolve(`dist/${pack.name}.validate.esm.js`),
+    dest: resolve(`dist/${packname}.validate.esm.js`),
     format: 'es'
   }
 }
@@ -48,7 +49,7 @@ function genConfig (opts) {
     input: opts.entry,
     output: {
       file: opts.dest,
-      name: pack.name,
+      name: packname,
       format: opts.format,
       banner
     },

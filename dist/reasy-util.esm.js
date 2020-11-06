@@ -1,6 +1,6 @@
 /*!
- * reasy-util v1.0.0 
- * (c) 2019 undefined
+ * reasy-util v1.0.1 
+ * (c) 2020 undefined
  */
 /**
  * 获取值的类型，返回对应的构造函数名
@@ -290,6 +290,12 @@ function getUtf8Length (str) {
   return totalLength
 }
 
+function required (str) {
+  if (!str && str !== 0) {
+    return _('This field is required')
+  }
+}
+
 function len (str, min, max) {
   var len = str.length;
 
@@ -573,4 +579,4 @@ function noSpace (str) {
   }
 }
 
-export { allMask, ascii, byteLen, chkHalf, debounce, decodeText, deepClone, domain, email, encodeText, even, float, getType, getUtf8Length, guid, hex, ip, ipNet, ipSpecific, ipToInt, isDefined, isEmptyObject, isObject, isSameNet, isUndef, lanMask, len, mac, mask, netSegmentCheck, noSpace, noSpaceStartEnd, num, phoneNumber, privateIP, specialMac, throttle, url };
+export { allMask, ascii, byteLen, chkHalf, debounce, decodeText, deepClone, domain, email, encodeText, even, float, getType, getUtf8Length, guid, hex, ip, ipNet, ipSpecific, ipToInt, isDefined, isEmptyObject, isObject, isSameNet, isUndef, lanMask, len, mac, mask, netSegmentCheck, noSpace, noSpaceStartEnd, num, phoneNumber, privateIP, required, specialMac, throttle, url };

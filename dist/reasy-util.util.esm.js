@@ -1,6 +1,6 @@
 /*!
- * reasy-util v1.0.0 
- * (c) 2019 undefined
+ * reasy-util v1.0.1 
+ * (c) 2020 undefined
  */
 /**
  * 获取值的类型，返回对应的构造函数名

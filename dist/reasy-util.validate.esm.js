@@ -1,6 +1,6 @@
 /*!
- * reasy-util v1.0.0 
- * (c) 2019 undefined
+ * reasy-util v1.0.1 
+ * (c) 2020 undefined
  */
 function getUtf8Length (str) {
   var len = str.length;
@@ -21,6 +21,12 @@ function getUtf8Length (str) {
     }
   }
   return totalLength
+}
+
+function required (str) {
+  if (!str && str !== 0) {
+    return _('This field is required')
+  }
 }
 
 function len (str, min, max) {
@@ -306,4 +312,4 @@ function noSpace (str) {
   }
 }
 
-export { allMask, ascii, byteLen, chkHalf, domain, email, even, float, getUtf8Length, hex, ip, ipNet, ipSpecific, lanMask, len, mac, mask, netSegmentCheck, noSpace, noSpaceStartEnd, num, phoneNumber, privateIP, specialMac, url };
+export { allMask, ascii, byteLen, chkHalf, domain, email, even, float, getUtf8Length, hex, ip, ipNet, ipSpecific, lanMask, len, mac, mask, netSegmentCheck, noSpace, noSpaceStartEnd, num, phoneNumber, privateIP, required, specialMac, url };
